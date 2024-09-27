@@ -1,47 +1,3 @@
-## !! Must read !!
-
-    The code from the previous sprint, which was inherited from sprint_1, was not working correctly, the only functions working were those "concatenating" parts of the query string to form the whole query, the database connection and the testing. The tests were running successfully as they were checking the query generation as a string they were not sending them to the server to check for the correct response.
-    I spent a lot of time figuring out how to fix that, but since the issue lied in the way the query was built, all the coverage functions have to be rechecked and fixed,(I printed the queries and sent them to rasdaman, and half of them were correctly returning some response after I fixed two of the coverages already implemented).
-    I don't know how it was checked in sprint one,because I was told by that team that they did't get a comment queries were generated wrong, but even the instructions in the readme file regarding how to import the library and use it are wrong even. You can try to follow the instructions of the readme in the two previous sprints, you'll get errors that those methods are not even defined.
-    As mentioned above because the error lied in the query generation, I would have to build from scratch the query generation and all coverages, and because this was a "half" sprint, I talked to the TA, Elizaveta Eremina, and she allowed me to built upon my code on the second sprint as the library I've implemented there is working correctly.
-    The credentiality for the code apart from tests and documentation on sprint2_pair4 goes all to me, so I am not using any python code from my other teammate is that would rase a problem from your side, contact him is you need this for organisational issues. Santiago Dominguez Ham
-    ///////////////////////
-    I could make use of the database connection function, and the logic that was already implemented for subseting operation, which was the same as my code, but just not working so I rewrote that to.
-    Tests were changed to fit my code.
-    I've worked regarding the comments on sprint2_pair4, and have added some functionality.
-
-## Added files and directories
-
-- 1- /jupyter_notebook/WDC.ipynb
-- 2- /src/ action.py
-- 4- /validation_wrapper/ coverages.py
-
-## Fixed from sprint 2
-
-- 1- removed the binary file that was pushed accidentally
-- 2- added a class to represent an Axis with a method to generate string representation. "This could be much more readable"
-- 3- Extended the testing to compare the actual results with the expected results.
-- 4- Removed the lazyquery generation functionality which you suggested pollutes the namespace for the user of your library, for which I gave the reasoning before.
-- 5- Added more coverages examples
-- 6- For this suggestion "A list doesn't represent all the capabilities of expressions. Expressions are better represented by trees. For example composing something like $c / ($c + 1) would be either hacky and error prone or impossible."
-  I handeled it by adding comments for invalid usage of the functionality because if I modify the structure to represent the expressions by a tree, I have to change the logic of action src file, the parameters of coverages, and
-  the user interaction with the library, which becomes inconvinient after I tried because the user has to build also the expression tree.
-  ```
-  tree = Expression("/")
-  tree.add_operand(Expression("$c"))
-  tree.add_operand(Expression("+", [Expression("$c"), Expression("1")]))
-  slice_datacube = datacube.slice(expression_tree)
-  datat = slice_datacube.execute()
-  .
-  .
-  .
-  here goes the rest of the library usage.
-  ```
-
-```
----
-
-# Sprint 3
 
 # WDC Wrapper
 
@@ -237,5 +193,5 @@ Encapsulate information about an action to be performed on a datacube.
 
 Follow the documentation to see the exact usage and results [jupyter_notebook][1].
 
-[1]: https://github.com/Constructor-Uni-SE-non-official/Sprint3_Pair4/blob/main/sprint_1/jupyter_notebook/WDC.ipynb "jupyter_notebook"
+[1]:https://github.com/Constructor-Uni-SE-non-official/Sprint3_Pair4/blob/main/sprint_1/jupyter_notebook/WDC.ipynb "jupyter_notebook"
 ```
