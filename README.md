@@ -1,4 +1,3 @@
-
 # WDC Wrapper
 
 This is a WCP package which generates WCPS queries and sends them to the rasdaman server for execution.
@@ -9,8 +8,6 @@ The response is processed and saved in corresponding format.
 - Python
 
 ## File Structure
-
-```
 
 ```
 \--Sprint3_Pair5\
