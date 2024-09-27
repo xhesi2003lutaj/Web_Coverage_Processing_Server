@@ -190,5 +190,5 @@ Encapsulate information about an action to be performed on a datacube.
 
 Follow the documentation to see the exact usage and results [jupyter_notebook][1].
 
-[1]:https://github.com/Constructor-Uni-SE-non-official/Sprint3_Pair4/blob/main/sprint_1/jupyter_notebook/WDC.ipynb "jupyter_notebook"
+[1]: https://github.com/Constructor-Uni-SE-non-official/Sprint3_Pair4/blob/main/sprint_1/jupyter_notebook/WDC.ipynb "jupyter_notebook"
 ```
